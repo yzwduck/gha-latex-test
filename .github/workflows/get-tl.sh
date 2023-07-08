@@ -9,8 +9,7 @@ uname -a
 echo "/tmp/some_dir" >> "$GITHUB_PATH"
 
 mkdir -p "$RUNNER_TEMP/tl"
-# curl -fLo "$RUNNER_TEMP/texlive.iso" https://mirror.ctan.org/systems/texlive/Images/texlive.iso
-# 7z x -o"$RUNNER_TEMP/tl" "$RUNNER_TEMP/texlive.iso"
-# rm "$RUNNER_TEMP/texlive.iso"
-curl -fL https://mirror.ctan.org/systems/texlive/Images/texlive.iso | bsdtar -xvC "$RUNNER_TEMP/tl"
+curl -fLo "$RUNNER_TEMP/texlive.iso" https://mirror.ctan.org/systems/texlive/Images/texlive.iso
+7z x -o"$RUNNER_TEMP/tl" "$RUNNER_TEMP/texlive.iso"
+rm "$RUNNER_TEMP/texlive.iso"
 ls -al "$RUNNER_TEMP/tl/"
