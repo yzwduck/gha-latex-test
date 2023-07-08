@@ -1,5 +1,0 @@
-name: 'Install LaTeX'
-description: 'Install TeXLive'
-run: |
-  bash main.sh
-shell: bash
